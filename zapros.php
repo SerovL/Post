@@ -1,8 +1,9 @@
 <?php
     require_once 'connect.php';
-    $input = $_POST['title'];
-    $textarea = $_POST['text'];
+    $input = $_POST['input'];
+    $textarea = $_POST['text_area'];
 
-    $sql = "INSERT INTO `ajax`(`input`, `text_area`) VALUES ('$input','$textarea')";
+    $sql = "INSERT INTO `Blog211`(`input`, `text_area`) VALUES ('$input','$textarea')";
 
-    $db->query($sql);
+   mysqli_query($connect, $sql);
+   header('Location:index.html');

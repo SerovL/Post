@@ -1,6 +1,6 @@
 <?php
-    $user = 'root';
-    $pass = '';
-    $dsn = "mysql:host=localhost;dbname=ajax;charset=utf8";
+$connect = mysqli_connect(hostname: 'localhost', username: 'root', password: '', database: 'Blog211' );
 
-    $db = new PDO($dsn, $user, $pass);
+if(!$connect){
+    die('ошибка ');
+}
